@@ -2,12 +2,7 @@ import { SidebarButton } from '@/components/SidebarButton'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ReactNode } from 'react'
-import {
-  IoClipboardOutline,
-  IoPeopleOutline,
-  IoSettingsOutline,
-  IoTabletPortraitOutline
-} from 'react-icons/io5'
+import { IoTabletPortraitOutline } from 'react-icons/io5'
 
 export type LayoutProps = {
   children: ReactNode
@@ -19,21 +14,21 @@ const sidebarButtons = [
     icon: <IoTabletPortraitOutline />,
     href: '/boards',
   },
-  {
-    title: 'Teams',
-    icon: <IoPeopleOutline />,
-    href: '/teams',
-  },
-  {
-    title: 'Reports',
-    icon: <IoClipboardOutline />,
-    href: '/reports',
-  },
-  {
-    title: 'Settings',
-    icon: <IoSettingsOutline />,
-    href: '/settings',
-  },
+  // {
+  //   title: 'Teams',
+  //   icon: <IoPeopleOutline />,
+  //   href: '/teams',
+  // },
+  // {
+  //   title: 'Reports',
+  //   icon: <IoClipboardOutline />,
+  //   href: '/reports',
+  // },
+  // {
+  //   title: 'Settings',
+  //   icon: <IoSettingsOutline />,
+  //   href: '/settings',
+  // },
 ]
 
 export const Layout = ({ children }: LayoutProps) => {
