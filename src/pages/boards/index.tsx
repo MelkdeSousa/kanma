@@ -24,7 +24,7 @@ const BoardsPage = () => {
 
         {!visible && (
           <input
-            className='text-3xl shadow-md rounded-md py-2 px-4  mr-4 font-medium placeholder:text-black-400 text-black-500'
+            className='text-3xl shadow-md rounded-md py-2 px-4 ml-[2px] mr-4 font-medium placeholder:text-black-400 text-black-500 outline-purple-500'
             type='text'
             value={boardTitle}
             onBlur={onUpdateBoardTitle}
@@ -44,7 +44,7 @@ const BoardsPage = () => {
       </fieldset>
 
       <div className='mt-8 flex w-full gap-4'>
-        <button className='bg-purple-500 rounded-md px-8 py-3 text-white-500 flex items-center gap-2 transition-all hover:shadow-md hover:bg-white-500 hover:border-purple-500 hover:text-purple-500 border duration-300'>
+        <button className='bg-purple-500 rounded-md px-8 py-3 text-white-500 flex items-center text-lg gap-2 transition-all hover:shadow-md hover:bg-white-500 hover:border-purple-500 hover:text-purple-500 border duration-300'>
           <IoFilter />
           <span>Filtrar</span>
         </button>
@@ -52,7 +52,7 @@ const BoardsPage = () => {
         <fieldset className='w-full relative'>
           <IoSearchOutline className='absolute h-full mx-4 w-6 text-black-400' />
           <input
-            className='transition-shadow duration-300 hover:shadow-md rounded-md w-full pl-12 p-4 placeholder:text-black-400 text-black-500'
+            className='transition-shadow duration-300 hover:shadow-md rounded-md w-full pl-12 p-4 placeholder:text-black-400 text-black-500 text-lg outline-purple-500'
             type='text'
             placeholder='Busque por cards, assuntos ou responsáveis...'
             name=''
