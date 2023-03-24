@@ -33,7 +33,7 @@ const sidebarButtons = [
 
 export const Layout = ({ children }: LayoutProps) => {
   return (
-    <div className='bg-purple-500 h-screen flex'>
+    <div className='bg-purple-500 w-screen h-screen flex'>
       <aside className='w-fit h-full p-9 flex flex-col items-center'>
         <Link href='/'>
           <Image
@@ -67,7 +67,7 @@ export const Layout = ({ children }: LayoutProps) => {
           </footer>
         </Link>
       </aside>
-      <main className='bg-white-500 w-full h-auto mt-1 rounded-tl-3xl'>
+      <main className='bg-white-500 w-full h-auto overflow-auto mt-1 rounded-tl-3xl'>
         {children}
       </main>
     </div>

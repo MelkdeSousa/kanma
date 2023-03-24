@@ -1,4 +1,6 @@
+import { Card } from "@/components/Card"
 import { Spinner } from "@/components/Spinner"
+import lanes from "@/constants/lanes"
 import useBoard from "@/hooks/useBoard"
 import { IoFilter, IoPencilOutline, IoSearchOutline } from "react-icons/io5"
 
@@ -14,8 +16,8 @@ const BoardsPage = () => {
   } = useBoard()
 
   return (
-    <div className='p-14'>
-      <fieldset className='flex text-ellipsis overflow-hidden w-full py-2 items-center'>
+    <div className='p-14 w-full flex flex-col h-full'>
+      <fieldset className='flex text-ellipsis w-full py-2 items-center'>
         {visible && (
           <div className='text-3xl text-black-500 mr-4 font-medium '>
             {loadingBoardTitle ? <Spinner /> : boardTitle}
@@ -59,6 +61,36 @@ const BoardsPage = () => {
             id=''
           />
         </fieldset>
+      </div>
+
+      <div className='flex mt-8 gap-y-6 justify-between flex-1 flex-col overflow-y-auto'>
+        <div className='flex justify-between'>
+          {lanes.map((lane, index) => (
+            <h2
+              key={Math.random()}
+              className='text-black-500 text-2xl font-semibold'
+            >
+              {lane.title}
+            </h2>
+          ))}
+        </div>
+
+        <div className='flex flex-1 overflow-auto justify-between'>
+          {lanes.map((lane, index) => (
+            <ul key={Math.random()} className='list-none flex flex-col'>
+              {lane.items.map((item, index) => (
+                <li key={Math.random()} className='list-none'>
+                  <Card
+                    key={Math.random()}
+                    title={item.title}
+                    description={item.description}
+                    tags={item.tags}
+                  />
+                </li>
+              ))}
+            </ul>
+          ))}
+        </div>
       </div>
     </div>
   )
