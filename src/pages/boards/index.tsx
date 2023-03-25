@@ -64,20 +64,23 @@ const BoardsPage = () => {
       </div>
 
       <div className='flex mt-8 gap-y-6 justify-between flex-1 flex-col overflow-y-auto'>
-        <div className='flex justify-between'>
+        <div className='flex gap-6'>
           {lanes.map((lane, index) => (
             <h2
               key={Math.random()}
-              className='text-black-500 text-2xl font-semibold'
+              className='text-black-500 text-2xl font-semibold w-full'
             >
               {lane.title}
             </h2>
           ))}
         </div>
 
-        <div className='flex flex-1 overflow-auto justify-between'>
+        <div className='flex flex-1 overflow-auto gap-6'>
           {lanes.map((lane, index) => (
-            <ul key={Math.random()} className='list-none flex flex-col'>
+            <ul
+              key={Math.random()}
+              className='list-none flex flex-col w-full gap-6'
+            >
               {lane.items.map((item, index) => (
                 <li key={Math.random()} className='list-none'>
                   <Card
