@@ -1,3 +1,6 @@
+import { useDroppable } from "@dnd-kit/core"
+import clsx from "clsx"
+import { useId } from "react"
 import { Card } from "../Card"
 
 export type ColumnProps = {
@@ -9,8 +12,18 @@ export type ColumnProps = {
 }
 
 export const Column = ({ items }: ColumnProps) => {
+  const id = useId()
+
+  const { setNodeRef } = useDroppable({
+    id,
+  })
+
   return (
-    <ul key={Math.random()} className='list-none flex flex-col w-full gap-6'>
+    <ul
+      ref={setNodeRef}
+      key={Math.random()}
+      className={clsx("list-none flex flex-col w-full gap-6")}
+    >
       {items.map((item, index) => (
         <li key={Math.random()} className='list-none'>
           <Card

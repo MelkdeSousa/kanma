@@ -2,6 +2,7 @@ import { Lanes } from "@/components/Lanes"
 import { Spinner } from "@/components/Spinner"
 import lanes from "@/constants/lanes"
 import useBoard from "@/hooks/useBoard"
+import { DndContext } from "@dnd-kit/core"
 import { IoFilter, IoPencilOutline, IoSearchOutline } from "react-icons/io5"
 
 const BoardsPage = () => {
@@ -63,7 +64,9 @@ const BoardsPage = () => {
         </fieldset>
       </div>
 
-      <Lanes lanes={lanes} />
+      <DndContext>
+        <Lanes lanes={lanes} />
+      </DndContext>
     </div>
   )
 }
