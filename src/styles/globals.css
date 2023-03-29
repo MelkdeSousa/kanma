@@ -1,3 +1,58 @@
 @tailwind base;
+
+:root {
+    --purple-100: #e5d8fb;
+    --purple-200: #cbb0f8;
+    --purple-300: #b089f4;
+    --purple-400: #9661f1;
+    --purple-500: #7c3aed;
+    --purple-600: #632ebe;
+    --purple-700: #4a238e;
+    --purple-800: #32175f;
+    --purple-900: #190c2f;
+
+    --white-100: #fefeff;
+    --white-200: #fdfdff;
+    --white-300: #fdfcff;
+    --white-400: #fcfbff;
+    --white-500: #fbfaff;
+    --white-600: #c9c8cc;
+    --white-700: #979699;
+    --white-800: #646466;
+    --white-900: #323233;
+
+    --black-100: #d9d7d7;
+    --black-200: #b3b0af;
+    --black-300: #8c8887;
+    --black-400: #66615f;
+    --black-500: #403937;
+    --black-600: #332e2c;
+    --black-700: #262221;
+    --black-800: #1a1716;
+    --black-900: #0d0b0b;
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--white-600) var(--purple-400);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--white-500);
+    border-radius: 0.25rem;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--purple-400);
+    border-radius: 1rem;
+    border: 2px solid var(--white-500);
+}
+
 @tailwind components;
 @tailwind utilities;
